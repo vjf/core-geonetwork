@@ -84,7 +84,7 @@ public class FilesystemStoreResource implements MetadataResource {
 
     @Override
     public String getId() {
-        return UrlEscapers.urlFragmentEscaper().escape(metadataUuid) +
+        return UrlEscapers.urlPathSegmentEscaper().escape(metadataUuid) +
                 "/attachments/" +
                 UrlEscapers.urlFragmentEscaper().escape(filename);
     }
